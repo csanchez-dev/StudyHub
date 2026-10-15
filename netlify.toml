@@ -1,0 +1,10 @@
+[build]
+  publish = "frontend"
+  command = "echo \"window.API_URL='${API_URL}';\" > frontend/config.js"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
